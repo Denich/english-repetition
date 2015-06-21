@@ -1,15 +1,20 @@
 (function() {
   'use strict';
 
-  describe('controllers', function(){
+  describe('M', function(){
+	var vm;
 
-    beforeEach(module('app'));
+    beforeEach(module(''));
 
-    it('should define more than 5 awesome things', inject(function($controller) {
-      var vm = $controller('MainController');
+    beforeEach(function() {
 
-      expect(angular.isArray(vm.awesomeThings)).toBeTruthy();
-      expect(vm.awesomeThings.length > 5).toBeTruthy();
-    }));
+    });
+
+    function execController() {
+    	vm = $controller('MainController', {
+
+    	});
+    }
+
   });
 })();
