@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('englishRepetition', ['ngAnimate', 'ngTouch', 'restangular', 'ngRoute', 'ngMaterial']);
+    .module('app', ['ngAnimate', 'ngTouch', 'restangular', 'ngRoute', 'ngMaterial']);
 
 })();

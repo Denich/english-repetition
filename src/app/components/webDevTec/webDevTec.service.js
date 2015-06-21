@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-      .module('englishRepetition')
+      .module('app')
       .service('webDevTec', webDevTec);
 
   /** @ngInject */

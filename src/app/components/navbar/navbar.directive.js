@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('englishRepetition')
+    .module('app')
     .directive('acmeNavbar', acmeNavbar);
 
   /** @ngInject */

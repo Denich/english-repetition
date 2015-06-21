@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('englishRepetition')
+    .module('app')
     .config(config);
 
   /** @ngInject */
