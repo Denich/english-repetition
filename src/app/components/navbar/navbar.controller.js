@@ -6,13 +6,13 @@
 		.controller('NavbarController', NavbarController);
 
 	/** @ngInject */
-	function NavbarController(NAV_MENU_ID, $mdSidenav) {
+	function NavbarController(navMenu) {
 		var vm = this;
 
 		vm.toggleNavMenu = toggleNavMenu;
 
 		function toggleNavMenu() {
-			$mdSidenav(NAV_MENU_ID).toggle();
+			navMenu.toggle();
 		}
 	}
 })();

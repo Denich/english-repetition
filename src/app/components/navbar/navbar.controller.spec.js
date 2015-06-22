@@ -2,18 +2,18 @@
 	'use strict';
 
 	describe('NavbarController', function () {
-		var vm, mockSidenav, sidenav, $controller, nav_menu_id;
+		var vm, mockSidenav, navMenu, $controller;
 
 		beforeEach(module('app'));
 
 		beforeEach(function () {
-			sidenav = jasmine.createSpyObj("sidenav", ["toggle"]);
-			mockSidenav = jasmine.createSpy("sideNav").and.returnValue(sidenav)
 		});
 
-		beforeEach(inject(function(_$controller_, NAV_MENU_ID) {
+		beforeEach(inject(function (_$controller_, _navMenu_) {
 			$controller = _$controller_;
-			nav_menu_id = NAV_MENU_ID
+			navMenu = _navMenu_;
+
+			spyOn(navMenu, "toggle");
 		}));
 
 		function execController() {
@@ -28,9 +28,8 @@
 				vm.toggleNavMenu();
 			});
 
-			it("will toggle navigation side menu", function () {
-				expect(mockSidenav).toHaveBeenCalledWith(nav_menu_id);
-				expect(sidenav.toggle).toHaveBeenCalled();
+			it("will toggle navigation menu", function () {
+				expect(navMenu.toggle).toHaveBeenCalled();
 			});
 		});
 	});
