@@ -1,11 +1,12 @@
 /* global malarkey:false, toastr:false, moment:false */
-(function() {
-  'use strict';
+(function () {
+	'use strict';
 
-  angular
-    .module('app')
-    .constant('malarkey', malarkey)
-    .constant('toastr', toastr)
-    .constant('moment', moment);
+	angular
+		.module('app')
+		.constant('malarkey', malarkey)
+		.constant('toastr', toastr)
+		.constant('moment', moment)
+		.constant('NAV_MENU_ID', 'nav-menu');
 
 })();
