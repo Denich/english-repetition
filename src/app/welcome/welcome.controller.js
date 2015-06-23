@@ -6,9 +6,13 @@
         .controller('WelcomeController', WelcomeController);
 
     /** @ngInject */
-    function WelcomeController() {
+    function WelcomeController(syncService) {
         var vm = this;
 
+        vm.sync = sync;
 
+        function sync() {
+            syncService.sync();
+        }
     }
 })();

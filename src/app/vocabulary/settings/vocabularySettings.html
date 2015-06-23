@@ -1,8 +1,7 @@
 <md-button class="md-raised md-primary" ng-click="settings.start()">Start</md-button>
 
 <md-select ng-model="settings.lesson">
-    <md-option selected="true">Lesson 1</md-option>
-    <md-option>Lesson 2</md-option>
+    <md-option ng-repeat="lesson in settings.lessons track by lesson.code">{{lesson.name}}</md-option>
 </md-select>
 
 <md-switch ng-model="settings.isRandom">
