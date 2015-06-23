@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('app', ['ngAnimate', 'ngTouch', 'restangular', 'ngRoute', 'ngMaterial']);
+      .module('app', ['ngAnimate', 'ngTouch', 'restangular', 'ngRoute', 'ngMaterial', 'LocalStorageModule']);
 
 })();

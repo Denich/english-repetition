@@ -1,14 +1,13 @@
-(function() {
-  'use strict';
+(function () {
+	'use strict';
 
-  angular
-    .module('app')
-    .config(config);
+	angular
+		.module('app')
+		.config(config);
 
-  /** @ngInject */
-  function config($logProvider) {
-    // Enable log
-    $logProvider.debugEnabled(true);
-  }
+	/** @ngInject */
+	function config(localStorageServiceProvider) {
+		localStorageServiceProvider.setPrefix("aec");
+	}
 
 })();

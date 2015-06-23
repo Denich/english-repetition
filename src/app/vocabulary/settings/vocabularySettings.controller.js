@@ -6,10 +6,18 @@
 		.controller('VocabularySettingsController', VocabularySettingsController);
 
 	/** @ngInject */
-	function VocabularySettingsController($location) {
+	function VocabularySettingsController($location, lessons) {
 		var vm = this;
 
 		vm.start = start;
+
+		init();
+
+		function init() {
+			lessons.get().then(function (l) {
+				vm.lessons = l;
+			});
+		}
 
 		function start() {
 			$location.url("/vocabulary/repetition");
