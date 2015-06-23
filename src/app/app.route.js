@@ -17,6 +17,11 @@
 				controller: 'VocabularySettingsController',
 				controllerAs: 'settings'
 			})
+			.when('/vocabulary/repetition', {
+				templateUrl: 'app/vocabulary/repetition/vocabularyRepetition.html',
+				controller: 'VocabularyRepetitionController',
+				controllerAs: 'repetition'
+			})
 			.otherwise({
 				redirectTo: '/'
 			});

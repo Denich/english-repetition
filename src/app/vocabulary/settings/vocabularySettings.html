@@ -1,1 +1,15 @@
-Vocabulary settings
+<md-button class="md-raised md-primary" ng-click="settings.start()">Start</md-button>
+
+<md-select ng-model="settings.lesson">
+    <md-option selected="true">Lesson 1</md-option>
+    <md-option>Lesson 2</md-option>
+</md-select>
+
+<md-switch ng-model="settings.isRandom">
+Randomize
+</md-switch>
+
+<md-radio-group ng-model="settings.direction">
+    <md-radio-button ng-value="'en-ru'">English-Russian</md-radio-button>
+    <md-radio-button ng-value="'ru-en'">Russian-English</md-radio-button>
+</md-radio-group>
