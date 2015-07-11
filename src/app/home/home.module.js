@@ -1,5 +1,5 @@
 (function () {
 	'use strict';
 
-	angular.module('app.home', ['ngRoute', 'ngMaterial', 'LocalStorageModule', 'app.core']);
+	angular.module('app.home', ['ui.router', 'ngMaterial', 'LocalStorageModule', 'app.core']);
 })();

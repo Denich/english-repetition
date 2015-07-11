@@ -5,9 +5,10 @@
 		.module('app.home')
 		.config(routeConfig);
 
-	function routeConfig($routeProvider) {
-		$routeProvider
-			.when('/', {
+	function routeConfig($stateProvider) {
+		$stateProvider
+			.state('home', {
+				url: '/',
 				templateUrl: 'app/home/home.html',
 				controller: 'HomeController',
 				controllerAs: 'home'

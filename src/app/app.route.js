@@ -5,7 +5,8 @@
 		.module('app')
 		.config(routeConfig);
 
-	function routeConfig() {
+	function routeConfig($urlRouterProvider) {
+		$urlRouterProvider.otherwise("/");
 	}
 
 })();
