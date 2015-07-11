@@ -2,11 +2,11 @@
     'use strict';
 
     angular
-        .module('app')
-        .controller('WelcomeController', WelcomeController);
+        .module('app.home')
+        .controller('HomeController', HomeController);
 
     /** @ngInject */
-    function WelcomeController(syncService) {
+    function HomeController(syncService) {
         var vm = this;
 
         vm.sync = sync;

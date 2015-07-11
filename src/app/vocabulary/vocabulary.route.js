@@ -1,7 +1,6 @@
 (function () {
 	'use strict';
 
-	//TODO: Vocabulary module
 	angular
 		.module('app.vocabulary')
 		.config(routeConfig);
