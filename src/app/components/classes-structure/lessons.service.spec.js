@@ -4,7 +4,7 @@
 	describe('lessons', function () {
 		var sut, localStorageService, $rootScope;
 
-		beforeEach(module('app', function () {
+		beforeEach(module('app.core', function () {
 
 		}));
 

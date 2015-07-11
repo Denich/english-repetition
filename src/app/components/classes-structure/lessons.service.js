@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('app')
+		.module('app.core')
 		.factory('lessons', lessons);
 
 	/** @ngInject */

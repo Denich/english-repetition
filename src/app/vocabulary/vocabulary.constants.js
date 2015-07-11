@@ -3,7 +3,7 @@
 
 	//TODO: use vocabulary module
 	angular
-		.module('app')
+		.module('app.vocabulary')
 		.constant('REPETITION_URL', '/vocabulary/repetition');
 
 })();

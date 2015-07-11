@@ -5,7 +5,7 @@
 		var vm, $controller, $location, navMenu;
 
 		beforeEach(function () {
-			module('app');
+			module('app.core');
 		});
 
 		beforeEach(inject(function (_$controller_, _$location_, _navMenu_) {

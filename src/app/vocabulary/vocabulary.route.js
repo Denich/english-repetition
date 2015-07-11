@@ -3,7 +3,7 @@
 
 	//TODO: Vocabulary module
 	angular
-		.module('app')
+		.module('app.vocabulary')
 		.config(routeConfig);
 
 	function routeConfig($routeProvider) {

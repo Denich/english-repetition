@@ -5,7 +5,7 @@
 		var vm, $controller, storedLessons, $rootScope;
 
 		beforeEach(function () {
-			module('app');
+			module('app.vocabulary');
 		});
 
 		beforeEach(inject(function (_$controller_, _$rootScope_, $q, lessons, $location, REPETITION_URL) {

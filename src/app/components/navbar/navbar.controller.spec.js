@@ -4,7 +4,7 @@
 	describe('NavbarController', function () {
 		var vm, mockSidenav, navMenu, $controller;
 
-		beforeEach(module('app'));
+		beforeEach(module('app.core'));
 
 		beforeEach(function () {
 		});

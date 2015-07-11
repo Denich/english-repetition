@@ -4,7 +4,7 @@
 	describe('navMenu', function () {
 		var sut, sidenavMenu;
 
-		beforeEach(module('app', function ($provide) {
+		beforeEach(module('app.core', function ($provide) {
 			sidenavMenu = jasmine.createSpyObj("sidenavMenu", ["toggle", "close"]);
 
 			var nav_menu_id = "nav_menu_id";

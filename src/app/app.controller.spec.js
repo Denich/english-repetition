@@ -2,17 +2,13 @@
 	'use strict';
 
 	describe('AppController', function () {
-		var vm;
+		//var vm;
 
 		beforeEach(module('app'));
 
 		beforeEach(function () {
 
 		});
-
-		function execController() {
-			vm = $controller('AppController', {});
-		}
 
 
 	});
