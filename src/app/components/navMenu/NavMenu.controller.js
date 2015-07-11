@@ -14,6 +14,7 @@
 		function navigateTo(url) {
 			$location.url(url);
 			navMenu.close();
+
 		}
 	}
 })();
