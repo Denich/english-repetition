@@ -14,7 +14,7 @@
 				controllerAs: 'settings'
 			})
 			.state('vocabulary-repetition', {
-				url: '/vocabulary/repetition/:lesson',
+				url: '/vocabulary/repetition/{lesson}',
 				templateUrl: 'app/vocabulary/repetition/vocabularyRepetition.html',
 				controller: 'VocabularyRepetitionController',
 				controllerAs: 'repetition'

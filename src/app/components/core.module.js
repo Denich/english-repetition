@@ -1,1 +1,1 @@
-angular.module('app.core', ['ngMaterial', 'LocalStorageModule']);
+angular.module('app.core', ['ngMaterial', 'LocalStorageModule', 'ui.router']);

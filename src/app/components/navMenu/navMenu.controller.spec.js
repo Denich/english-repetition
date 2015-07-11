@@ -2,16 +2,16 @@
 	'use strict';
 
 	describe('NavMenuController', function () {
-		var vm, $controller, $location, navMenu;
+		var vm, $controller, $state, navMenu;
 
 		beforeEach(function () {
 			module('app.core');
 		});
 
-		beforeEach(inject(function (_$controller_, _$location_, _navMenu_) {
+		beforeEach(inject(function (_$controller_, _$state_, _navMenu_) {
 			$controller = _$controller_;
-			$location = _$location_;
-			spyOn($location, "url");
+			$state = _$state_;
+			spyOn($state, "go");
 
 			navMenu = _navMenu_;
 			spyOn(navMenu, "close");
@@ -22,16 +22,16 @@
 		}
 
 		describe("Navigate to", function () {
-			var url;
+			var state;
 
 			beforeEach(function () {
 				execController();
-				url = "url";
-				vm.navigateTo(url);
+				state = "state";
+				vm.navigateTo(state);
 			});
 
-			it("will change url to provided", function () {
-				expect($location.url).toHaveBeenCalledWith(url);
+			it("will change state to provided", function () {
+				expect($state.go).toHaveBeenCalledWith(state);
 			});
 
 			it("will close navigation menu", function () {

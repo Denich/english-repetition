@@ -8,14 +8,12 @@
 			module('app.vocabulary');
 		});
 
-		beforeEach(inject(function (_$controller_, _$rootScope_, $q, lessons, $location, REPETITION_URL) {
+		beforeEach(inject(function (_$controller_, _$rootScope_, $q, lessons, $state) {
 			$controller = _$controller_;
 			$rootScope = _$rootScope_;
 
-			spyOn($location, "url");
-			this.$location = $location;
-
-			this.REPETITION_URL = REPETITION_URL;
+			spyOn($state, "go");
+			this.$state = $state;
 
 			storedLessons = ["storedLesson1", "storedLesson2"];
 			spyOn(lessons, 'get').and.callFake(function () {
@@ -49,7 +47,7 @@
 			});
 
 			it("will show lesson repetition for selected lesson", function () {
-				expect(this.$location.url).toHaveBeenCalledWith(this.REPETITION_URL + "/" + this.selectedLessonCode);
+				expect(this.$state.go).toHaveBeenCalledWith('vocabulary-repetition', {lesson: this.selectedLessonCode});
 			});
 		});
 	});

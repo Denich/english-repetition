@@ -6,7 +6,7 @@
 		.controller('VocabularySettingsController', VocabularySettingsController);
 
 	/** @ngInject */
-	function VocabularySettingsController($location, lessons, REPETITION_URL) {
+	function VocabularySettingsController($state, lessons) {
 		var vm = this;
 
 		vm.start = start;
@@ -23,7 +23,7 @@
 		}
 
 		function start() {
-			$location.url(REPETITION_URL + "/" + vm.lesson.code);
+			$state.go('vocabulary-repetition', {lesson: vm.lesson.code});
 		}
 	}
 })();

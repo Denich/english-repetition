@@ -6,13 +6,13 @@
 		.controller('NavMenuController', NavMenuController);
 
 	/** @ngInject */
-	function NavMenuController($location, navMenu) {
+	function NavMenuController($state, navMenu) {
 		var vm = this;
 
 		vm.navigateTo = navigateTo;
 
-		function navigateTo(url) {
-			$location.url(url);
+		function navigateTo(state) {
+			$state.go(state);
 			navMenu.close();
 
 		}
